@@ -225,6 +225,5 @@ func main() {
 	fmt.Printf("Gatos: %v Kg. \n", gatoValue)
 	fmt.Printf("Hamsters: %v Kg. \n", hamsterValue)
 	fmt.Printf("Tarântulas: %v Kg. \n", tarantulaValue)
-	fmt.Printf("\n") //..........................................................................................................
 
 }
