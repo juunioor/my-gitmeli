@@ -73,6 +73,8 @@ func (loja *loja) Adicionar(produto IntefaceProduto) {
 	loja.produtos = append(loja.produtos, produto)
 }
 
+// ..............................................................................................................................
+
 func main() {
 	aluno1 := Aluno{
 		nome:      "Junior",
