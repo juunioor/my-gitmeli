@@ -97,5 +97,4 @@ func main() {
 	minhaLoja.Adicionar(produto3)
 
 	fmt.Printf("Total da loja: R$%.2f\n", minhaLoja.Total())
-
 }
