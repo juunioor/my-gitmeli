@@ -58,14 +58,14 @@ func Exercicio4() {
 
 func main() {
 	Exercicio1()
-	fmt.Println("\n")
+	fmt.Printf("\n")
 
 	Exercicio2()
-	fmt.Println("\n")
+	fmt.Printf("\n")
 
 	Exercicio3()
-	fmt.Println("\n")
+	fmt.Printf("\n")
 
 	Exercicio4()
-	fmt.Println("\n")
+	fmt.Printf("\n")
 }
