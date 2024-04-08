@@ -2,22 +2,6 @@ package main
 
 import "fmt"
 
-type Aluno struct {
-	nome      string
-	sobrenome string
-	rg        string
-	data      string
-}
-
-func (aluno Aluno) Detalhamento() {
-	fmt.Printf("Nome: [%v]\n", aluno.nome)
-	fmt.Printf("Sobrenome: [%v]\n", aluno.sobrenome)
-	fmt.Printf("RG: [%v]\n", aluno.rg)
-	fmt.Printf("Data de admissão: [%v]\n", aluno.data)
-}
-
-// ..............................................................................................................................
-
 type loja struct {
 	produtos []IntefaceProduto
 }
@@ -73,19 +57,7 @@ func (loja *loja) Adicionar(produto IntefaceProduto) {
 	loja.produtos = append(loja.produtos, produto)
 }
 
-// ..............................................................................................................................
-
 func main() {
-	aluno1 := Aluno{
-		nome:      "Junior",
-		sobrenome: "Lopes",
-		rg:        "00.000.000-0",
-		data:      "02/04/2024",
-	}
-
-	aluno1.Detalhamento()
-	fmt.Printf("\n") // .........................................................................................................
-
 	minhaLoja := novaLoja()
 
 	produto1 := novoProduto("Pequeno", "Caneta", 2.50)
