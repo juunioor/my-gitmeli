@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/csv"
 	"fmt"
 	"os"
 	"strings"
@@ -28,32 +27,6 @@ func guardarInfos(produtos []Produto) {
 	}
 }
 
-// ..............................................................................................................................
-
-func lerInfos(arquivo string) {
-	file, err := os.Open(arquivo)
-	if err != nil {
-		fmt.Println("Erro ao abrir o arquivo!", err)
-	}
-
-	reader := csv.NewReader(file)
-
-	linhas, err := reader.ReadAll()
-	if err != nil {
-		fmt.Println("Erro ao ler o arquivo!", err)
-	}
-
-	for _, linha := range linhas {
-		for _, coluna := range linha {
-			fmt.Printf("%-20s", coluna)
-		}
-		fmt.Println()
-	}
-	fmt.Println()
-}
-
-// ..............................................................................................................................
-
 func main() {
 	produtos := []Produto{
 		{id: 11, preco: 25.50, qtd: 1},
@@ -63,5 +36,5 @@ func main() {
 	}
 
 	guardarInfos(produtos)
-	lerInfos("infos.csv")
+	fmt.Println()
 }
