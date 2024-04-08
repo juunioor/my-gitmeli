@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "nome": "Camiseta",
+      "cor": "Azul",
+      "preco": 25.99,
+      "estoque": 100,
+      "codigo": "ABC123",
+      "publicacao": true,
+      "data_criacao": "2024-04-05T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "nome": "Calça Jeans",
+      "cor": "Preto",
+      "preco": 49.99,
+      "estoque": 50,
+      "codigo": "DEF456",
+      "publicacao": false,
+      "data_criacao": "2024-04-05T12:00:00Z"
+    }
+  ]
