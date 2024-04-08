@@ -8,16 +8,6 @@ import (
 	"strings"
 )
 
-func lerArquivo(arquivo string) {
-	file, err := os.Open(arquivo)
-	if err != nil {
-		panic(fmt.Errorf("o arquivo indicado não foi encontrado ou está danificado"))
-	}
-	defer file.Close()
-}
-
-// ..............................................................................................................................
-
 type Cliente struct {
 	arquivo   int
 	nome      string
@@ -98,8 +88,6 @@ func gerarID(arquivo string) (int, error) {
 
 func main() {
 	arquivo := "customers.txt"
-	lerArquivo(arquivo)
-	fmt.Printf("\n") // .........................................................................................................
 
 	// criando ID do usuário
 	id, err := gerarID(arquivo)
@@ -137,5 +125,4 @@ func main() {
 			fmt.Println("Recovered: ", r)
 		}
 	}()
-
 }
