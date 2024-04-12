@@ -192,7 +192,7 @@ func (c *ProductHandler) UpdateFields() gin.HandlerFunc {
 // @Produce json
 // @Param token header string true "token"
 // @Param product body CreateRequestDto true "Product to store"
-// @Success 201 {object} string "Resposta bem-sucedida"
+// @Success 201 {object} web.Response "Resposta bem-sucedida"
 // @Router /products [post]
 func (c *ProductHandler) Create() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
