@@ -1,0 +1,12 @@
+Quais são as diferenças entre a caixa branca e a caixa preta?
+R:      Caixa preta é um teste geralmente aplicado em testes funcionais, não funcionais e testes de regressão em que a pessoa que executa não cnhece nada da estrutura, projeto ou operação interna.
+        Já a caixa branca, ao contrário da caixa preta, quem executa o teste tem conhecimento e visibilidade do código.
+
+O que é um teste funcional?
+R:      É um tipo de teste que valida se o software atende a um determinado requisito. É uma parte extremamente essencial para garantir qualidade de software e que atende as especificações funcionais estabelecidas.
+
+O que é um teste de integração?
+R:      Basicamente combinar vários componentes ou camadas e testá-las juntas e ver se elas se comportam bem em comunhão/comunicação, literalmente se a integração entre as duas funcionam e interagem corretamente.
+
+Indique as dimensões prioritárias de qualidade no MELI.
+R:      Funcional Suitability, Performance Efficiency, Reliability, Security & Maintainability.
