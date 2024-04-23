@@ -30,7 +30,7 @@ func (s *StubStore) Write(data interface{}) error {
 	return nil
 }
 
-func TestGetAll(t *testing.T) {
+func TestUpdateFields(t *testing.T) {
 	expectedProducts := products.Product{
 		ID: 1, Nome: "After Update", Cor: "Amarela", Preco: 70.20, Estoque: 20, Codigo: "JAR789", Tamanho: "P", Publicacao: true, DataCriacao: time.Date(2024, time.April, 11, 18, 07, 26, 532546000, time.FixedZone("GMT", -3*60*60)),
 	}
