@@ -1,0 +1,230 @@
+definitions:
+  handler.CreateRequestDto:
+    properties:
+      codigo:
+        type: string
+      cor:
+        type: string
+      data_criacao:
+        type: string
+      estoque:
+        type: integer
+      id:
+        type: integer
+      nome:
+        type: string
+      preco:
+        type: number
+      publicacao:
+        type: boolean
+      tamanho:
+        type: string
+    type: object
+  handler.UpdateFieldsRequestDto:
+    properties:
+      nome:
+        type: string
+      preco:
+        type: number
+    type: object
+  handler.UpdateRequestDto:
+    properties:
+      codigo:
+        type: string
+      cor:
+        type: string
+      data_criacao:
+        type: string
+      estoque:
+        type: integer
+      nome:
+        type: string
+      preco:
+        type: number
+      publicacao:
+        type: boolean
+      tamanho:
+        type: string
+    required:
+    - codigo
+    - cor
+    - data_criacao
+    - estoque
+    - nome
+    - preco
+    - publicacao
+    - tamanho
+    type: object
+  web.Response:
+    properties:
+      code:
+        type: string
+      data: {}
+      error:
+        type: string
+    type: object
+info:
+  contact:
+    name: API Support
+    url: 'https: //developers.mercadolibre. com.ar/support'
+  description: This API Handle MELI Products.
+  termsOfService: https://developers.mercadolibre.com.ar/es_ar/terminos-y-condicianes
+  title: MELI Bootcamp API
+  version: "1.0"
+paths:
+  /products:
+    get:
+      consumes:
+      - application/json
+      description: get products
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Resposta bem-sucedida
+          schema:
+            type: string
+      summary: List products
+      tags:
+      - Products
+    post:
+      consumes:
+      - application/json
+      description: create products
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: Product to store
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.CreateRequestDto'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Resposta bem-sucedida
+          schema:
+            type: string
+      summary: Store products
+      tags:
+      - Products
+  /products/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: remove products
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Resposta bem-sucedida
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Remove products
+      tags:
+      - Products
+    get:
+      consumes:
+      - application/json
+      description: Obtém um produto pelo seu ID
+      parameters:
+      - description: ID do Produto
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Produto encontrado com sucesso
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Obter produto por ID
+    patch:
+      consumes:
+      - application/json
+      description: update product fields
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Fields to update
+        in: body
+        name: fields
+        required: true
+        schema:
+          $ref: '#/definitions/handler.UpdateFieldsRequestDto'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Resposta bem-sucedida
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Update product fields
+      tags:
+      - Products
+    put:
+      consumes:
+      - application/json
+      description: update products
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Product fields to update
+        in: body
+        name: fields
+        required: true
+        schema:
+          $ref: '#/definitions/handler.UpdateRequestDto'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Resposta bem-sucedida
+          schema:
+            $ref: '#/definitions/web.Response'
+        "400":
+          description: ID inválido
+          schema:
+            $ref: '#/definitions/web.Response'
+        "404":
+          description: Produto não encontrado
+          schema:
+            $ref: '#/definitions/web.Response'
+        "422":
+          description: Não foi possível processar as instruções presentes
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Update products
+      tags:
+      - Products
+swagger: "2.0"
