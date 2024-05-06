@@ -1,0 +1,11 @@
+a. Qual é a chave primária da tabela de funcionários? Justifique a resposta.
+    > A chave primária da tabela funcionários é o "employee_id", pois é um identificador único.
+
+b. Qual é a chave primária para a tabela de departamentos? Justifique a resposta.
+    > A chave primária da tabela departamentos é o "departament_id", pois é um identificador único.
+
+c. Que relacionamento(s) existiriam entre as tabelas? Em qual tabela deve haver chave estrangeira? 
+   A qual campo de qual tabela essa chave estrangeira se refere? Justifique a resposta.
+    > O relacionamento que existe é que os funcionários estão vinculados a um determinado detepartamento,
+      e cada departamento possui 1 ou mais funcionários. A chave estrangeira deve ficar na tabela funcionários.
+      A chave estrangeira se refere ao ID do departamento pois é o identificador único para essa relação.
