@@ -1,0 +1,27 @@
+1. Como é chamado um JOIN em um banco de dados?
+    SELECT * FROM tabela1 JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
+
+2. Nomeie e explique 2 tipos de JOIN.
+    INNER JOIN 
+    Ele retorna apenas os registros que têm correspondência em ambas as tabelas sendo unidas.
+    [SELECT colunas FROM tabela1 INNER JOIN tabela2 ON tabela1.coluna = tabela2.coluna;]
+
+    LEFT JOIN 
+    Ele retorna todos os registros da tabela à esquerda da cláusula JOIN (tabela à esquerda), 
+    junto com os registros correspondentes da tabela à direita (tabela à direita), se houver correspondência.
+    [SELECT colunas FROM tabela1 LEFT JOIN tabela2 ON tabela1.coluna = tabela2.coluna;]
+
+3. Para que serve o GROUP BY?
+    Ele é usado para agrupar tuplas de uma tabela com base nos valores, podendo ser ordenado com COUNT, SUM, AVG, MAX e MIN.
+
+4. Para que serve o HAVING?
+    Semelhante ao WHERE, HAVING é usado para filtrar grupos de linhas retornadas por uma consulta, com base em uma condição especificada.
+
+5. Dados os diagramas a seguir, indique a qual tipo de JOIN cada um corresponde:
+    1. INNER JOIN
+    2. LEFT JOIN
+
+6. Escreva uma consulta genérica para cada um dos diagramas abaixo:
+    1. SELECT c.*, p.* FROM clientes c RIGHT JOIN pedidos p ON c.id = p.cliente_id;
+
+    2. SELECT c.*, p.* FROM clientes c FULL JOIN pedidos p ON c.id = p.cliente_id;
