@@ -1,0 +1,7 @@
+1. Explique o conceito de normalização e por que ele é usado.
+    > Estruturar os dados de forma eficiente, reduzindo redundâncias e prevenindo anomalias de atualização. 
+      Aplicação de regras e procedimentos para assegurar que o banco de dados esteja logicamente organizado e coeso.
+
+11. O que são índices? Para que servem?
+    > Índices são estruturas de dados utilizadas em bancos de dados para melhorar o desempenho das consultas. 
+      Eles servem para acelerar a recuperação de registros, permitindo que o sistema encontre rapidamente os dados desejados.
